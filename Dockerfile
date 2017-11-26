@@ -15,7 +15,7 @@ RUN \
 
 RUN \
   cd /build && \
-  curl -LO https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
+  curl -LO ${CUDA_TOOLKIT_URL}
 
 RUN \
   cd /build && \
