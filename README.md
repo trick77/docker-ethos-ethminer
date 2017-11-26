@@ -5,4 +5,4 @@ Build the image and start the container (which will exit immediately) with ```do
 
 Building the image will take quite some time and download more than 1 GB of data. Build errors have to be fixed but shouldn't occur unless one of the referenced libraries (i.e. the CUDA toolkit) changes its name/availability.
 
-Once the image build was successfuly and the container was created using the up command, the binaries can be copied from the container to the host with a simple ```docker cp docker-ethos-ethminer:/build/ethminer/build ./``` and then transferred to a mining rig.
+Once the image build was successful and the container was created using the up command, the binaries can be copied from the container to the host with a simple ```docker cp docker-ethos-ethminer:/build/ethminer/build ./``` and then transferred to a mining rig.
