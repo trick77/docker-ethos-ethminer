@@ -1,0 +1,8 @@
+version: '2.3'
+
+services:
+  build:
+    image: docker-ethos-ethminer
+    container_name: docker-ethos-ethminer
+    build:
+      context: .
