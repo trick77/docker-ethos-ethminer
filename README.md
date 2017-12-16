@@ -1,5 +1,5 @@
 # docker-ethos-ethminer
-Docker image which makes building your own or preferred version of ethminer for ethOS super easy without polluting your system with openCL and CUDA libraries. The resulting binary can be used to replace the existing ethminer binary in /opt/miners/ethminer of your mining rig. Make sure to backup the existing binary though. Please be  aware that the new binary may get replaced with every manual update of ethOS and/or its miners. 
+Docker image which makes building your own or preferred version of ethminer for ethOS super easy without polluting your build system with openCL and CUDA libraries. The resulting binary can be used to replace the existing ethminer binary in /opt/miners/ethminer of your mining rig. Make sure to backup the existing binary though. Please be  aware that the new binary may get replaced with every manual update of ethOS and/or its miners. 
 
 Build the image and start the container (which will exit immediately) with ```docker-compose up```
 

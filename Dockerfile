@@ -1,8 +1,8 @@
 FROM ubuntu:16.04
 
-ENV ETHMINER_GIT_URL=https://github.com/ethereum-mining/ethminer
-ENV ETHMINER_VERSION=0.13.0.dev0
-ENV CUDA_TOOLKIT_URL=https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
+ARG ETHMINER_GIT_URL=https://github.com/ethereum-mining/ethminer
+ARG ETHMINER_VERSION=0.13.0.dev0
+ARG CUDA_TOOLKIT_URL=https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
 
 RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
@@ -22,7 +22,7 @@ RUN \
   sh ./$(basename "$CUDA_TOOLKIT_URL") --silent --toolkit --no-drm && \
   rm ./$(basename "$CUDA_TOOLKIT_URL")
 
-ENV ETHMINER_GIT_BRANCH=master
+ARG ETHMINER_GIT_BRANCH=master
 
 RUN \
   cd /build && \
@@ -33,6 +33,6 @@ RUN \
 
 RUN \
   cd /build/ethminer/build && \
-  cmake -DETHASHCUDA=ON -DETHASHCUDA=ON -DETHSTRATUM=ON .. && \
+  cmake -DETHASHCL=ON -DETHASHCUDA=ON -DETHSTRATUM=ON .. && \
   cmake --build .
 
