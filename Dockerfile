@@ -9,7 +9,7 @@ RUN \
   rm -rf /var/lib/apt/lists/* && \
   mkdir /build
 
-ARG CUDA_TOOLKIT_URL=https://developer.nvidia.com/compute/cuda/9.1/Prod/local_installers/cuda_9.1.85_387.26_linux
+ARG CUDA_TOOLKIT_URL=https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
 
 RUN \
   cd /build && \
