@@ -28,7 +28,7 @@ RUN \
   cd /build && \
   git clone ${ETHMINER_GIT_URL} && \
   cd ./ethminer && \
-  git checkout tags/${ETHMINER_GIT_TAG} -b ${ETHMINER_GIT_BRANCH} && \
+  git checkout tags/${ETHMINER_GIT_TAG} && \
   mkdir ./build
 
 RUN \
